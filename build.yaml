@@ -33,6 +33,7 @@ include:
   # Right half (peripheral)
   - board: nice_nano
     shield: corne_right
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     artifact-name: corne_right
   # Settings reset (flash to all 3 boards before flashing new firmware)
   - board: nice_nano
