@@ -25,9 +25,10 @@ include:
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: corne_dongle
-  # Left half (peripheral)
+  # Left half (peripheral) — override central role from upstream shield
   - board: nice_nano
     shield: corne_left
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     artifact-name: corne_left
   # Right half (peripheral)
   - board: nice_nano
